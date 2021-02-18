@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'io.ebean' version '12.1.9'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.30'
+    id 'org.jetbrains.kotlin.kapt' version '1.4.30'
+}
+
+group 'de.iisys.va'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // https://mvnrepository.com/artifact/io.javalin/javalin
+    implementation group: 'io.javalin', name: 'javalin', version: '3.13.3'
+
+
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.12.1"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.12.1"
+
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+
+    implementation 'io.ebean:ebean:12.1.9'
+    implementation 'io.ebean:ebean-querybean:12.1.9'
+    testImplementation("javax.xml.bind:jaxb-api:2.3.1")
+    testImplementation 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
+    // query bean generation
+    kapt 'io.ebean:kotlin-querybean-generator:12.1.9'
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.8'
+}
