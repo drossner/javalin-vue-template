@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <b-navbar>
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
-    </b-navbar>
+  <div class="row">
+    <b-col>
+      <b-navbar>
+        <b-navbar-brand href="#">NavBar</b-navbar-brand>
+      </b-navbar>
+    </b-col>
   </div>
 </template>
 
